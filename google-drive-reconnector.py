@@ -19,6 +19,7 @@ if args.google_drive_dir:
         print("{} is not available.".format(mount_dir))
         print("umount -d {}".format(mount_dir))
         subprocess.run("umount -d {}".format(mount_dir), shell=True)
+        subprocess.run("fusermount -u  {}".format(mount_dir), shell=True)
         print("mount -a")
         subprocess.run("mount -a", shell=True)
     else:
