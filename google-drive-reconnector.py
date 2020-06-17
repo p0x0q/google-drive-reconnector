@@ -7,7 +7,6 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument(
     "--google-drive-dir",
-    nargs="+",
     required=True,
     help="google drive dir(ex.): /media/gdrive",
 )
