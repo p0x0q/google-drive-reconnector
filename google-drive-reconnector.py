@@ -18,7 +18,7 @@ if args.google_drive_dir:
         print("{} is not available.".format(mount_dir))
         subprocess.run("umount -d {}".format(mount_dir), shell=True)
         subprocess.run("fusermount -u  {}".format(mount_dir), shell=True)
-        subprocess.run("fusermount -l  {}".format(mount_dir), shell=True)
+        subprocess.run("fusermount -uz  {}".format(mount_dir), shell=True)
         subprocess.run("mount -a", shell=True)
         #むやみにアップデートするとクラッシュする
         #subprocess.run("su - google", shell=True)
